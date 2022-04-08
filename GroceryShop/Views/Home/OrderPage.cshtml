@@ -1,0 +1,44 @@
+﻿@model GroceryShop.Models.Product
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Grocery Shop</h1>
+    <h2>Products in stock:</h2>
+</div>
+
+<h3>Fruits</h3>
+<p>1.Orange</p>
+<p>2.Banana</p>
+<p>3.Apple</p>
+<p>4.Melon</p>
+<p>5.Kiwi</p>
+
+
+<h3>Vegetables</h3>
+<p>1.Potato</p>
+<p>2.Cucumber</p>
+<p>3.Carrot</p>
+<p>4.Spinach</p>
+<p>5.Peas</p>
+
+<form method="post">
+    <div class="text-center">
+        <p>Enter product you would like to order</p>
+        <div class="form-group">
+            <input asp-for="Name" class="form-control" placeholder="Insert product">
+
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add to Cart" class="btn btn-primary" />
+            </div>
+
+        </div>
+    </div>
+</form>
+
+<div class="button-holder">
+    <a href="/Home/FinalizeOrder" class="btn btn-info">Order</a>
+</div>
+
+

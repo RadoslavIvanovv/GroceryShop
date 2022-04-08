@@ -1,0 +1,17 @@
+﻿@model Order
+
+@if(Model.TotalPrice == 0)
+{
+    <h1>No order was placed!</h1>
+
+}
+else if(Model.TotalPrice > 0)
+{
+    <h1>Thank you for your order!</h1>
+
+    <p>Your total is @Model.TotalPrice aws.</p>
+}
+
+<div class="button-holder">
+    <a href="/Home/OrderPage" class="btn btn-info">Back to Main page</a>
+</div>
